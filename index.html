@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SoleCheck — India Sneaker Price Scanner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>SoleCheck — India Sneaker Prices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background: #0b0f14;
-    }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
 
-<body class="text-white font-sans">
+<body class="bg-gradient-to-br from-black via-[#0b0f1a] to-black text-white min-h-screen">
 
 <!-- HEADER -->
-<header class="flex items-center justify-between px-6 py-4 border-b border-gray-800">
+<header class="flex items-center justify-between px-8 py-6 border-b border-white/10">
   <div class="text-2xl font-bold tracking-wide">SC</div>
 
-  <input 
-    type="text"
+  <input
+    class="w-[520px] bg-[#111827] border border-white/10 rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-blue-500 transition"
     placeholder="Search Nike, Adidas, New Balance or SKU"
-    class="w-1/2 px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
   />
 </header>
 
+<!-- LAYOUT -->
 <div class="flex">
 
   <!-- SIDEBAR -->
-  <aside class="w-64 p-6 border-r border-gray-800 hidden md:block">
+  <aside class="w-72 p-6 border-r border-white/10">
     <h3 class="text-lg font-semibold mb-4">Filters</h3>
 
     <div class="mb-6">
-      <p class="text-sm text-gray-400 mb-2">Brand</p>
-      <div class="space-y-2">
-        <label class="block"><input type="checkbox"> Nike</label>
-        <label class="block"><input type="checkbox"> Adidas</label>
-        <label class="block"><input type="checkbox"> New Balance</label>
-      </div>
+      <p class="text-sm text-white/60 mb-2">Brand</p>
+      <label class="block"><input type="checkbox"> Nike</label>
+      <label class="block"><input type="checkbox"> Adidas</label>
+      <label class="block"><input type="checkbox"> New Balance</label>
     </div>
 
     <div class="mb-6">
-      <p class="text-sm text-gray-400 mb-2">Retailers</p>
-      <div class="space-y-2">
-        <label class="block"><input type="checkbox"> Superkicks</label>
-        <label class="block"><input type="checkbox"> VegNonVeg</label>
-        <label class="block"><input type="checkbox"> Crepdog Crew</label>
-        <label class="block"><input type="checkbox"> Dawntown</label>
-      </div>
-    </div>
-
-    <div>
-      <p class="text-sm text-gray-400 mb-2">Price Range</p>
-      <input type="range" min="5000" max="50000" class="w-full">
+      <p class="text-sm text-white/60 mb-2">Retailers</p>
+      <label class="block">Superkicks</label>
+      <label class="block">VegNonVeg</label>
+      <label class="block">Crepdog Crew</label>
+      <label class="block">Dawntown</label>
     </div>
   </aside>
 
-  <!-- MAIN GRID -->
-  <main class="flex-1 p-6">
-    <h1 class="text-2xl font-semibold mb-6">Lowest Prices Right Now</h1>
+  <!-- MAIN -->
+  <main class="flex-1 p-8">
+    <h1 class="text-3xl font-semibold mb-8">Lowest Prices in India</h1>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- CARD -->
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition">
-        <img src="https://images.unsplash.com/photo-1606813907291-d86efa8cbb2f" class="rounded-lg mb-4">
-        <h2 class="font-bold italic">Nike Air Force 1</h2>
-        <p class="text-sm text-gray-400 mt-1">Verified Retailers</p>
-        <p class="text-xl font-semibold text-green-400 mt-3">₹9,995</p>
+      <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/10 hover:border-blue-500/40 hover:-translate-y-1 transition">
+        <img src="https://images.stockx.com/images/Nike-Air-Force-1-07-White.jpg" class="rounded-xl mb-4">
+        <h2 class="font-semibold italic">Nike Air Force 1</h2>
+        <p class="text-sm text-white/60">Verified Retailers</p>
+        <p class="text-2xl font-bold text-green-400 mt-2">₹9,995</p>
       </div>
 
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition">
-        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" class="rounded-lg mb-4">
-        <h2 class="font-bold italic">Adidas Samba OG</h2>
-        <p class="text-sm text-gray-400 mt-1">Verified Retailers</p>
-        <p class="text-xl font-semibold text-green-400 mt-3">₹10,999</p>
+      <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/10 hover:border-blue-500/40 hover:-translate-y-1 transition">
+        <img src="https://images.stockx.com/images/adidas-Samba-OG-White-Gum.jpg" class="rounded-xl mb-4">
+        <h2 class="font-semibold italic">Adidas Samba OG</h2>
+        <p class="text-sm text-white/60">Verified Retailers</p>
+        <p class="text-2xl font-bold text-green-400 mt-2">₹10,999</p>
       </div>
 
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition">
-        <img src="https://images.unsplash.com/photo-1584735175097-719d848f844b" class="rounded-lg mb-4">
-        <h2 class="font-bold italic">New Balance 550</h2>
-        <p class="text-sm text-gray-400 mt-1">Verified Retailers</p>
-        <p class="text-xl font-semibold text-green-400 mt-3">₹12,499</p>
+      <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/10 hover:border-blue-500/40 hover:-translate-y-1 transition">
+        <img src="https://images.stockx.com/images/New-Balance-550-White-Green.jpg" class="rounded-xl mb-4">
+        <h2 class="font-semibold italic">New Balance 550</h2>
+        <p class="text-sm text-white/60">Verified Retailers</p>
+        <p class="text-2xl font-bold text-green-400 mt-2">₹12,499</p>
       </div>
 
     </div>
